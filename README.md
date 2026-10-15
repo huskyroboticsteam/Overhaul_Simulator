@@ -1,6 +1,10 @@
+# Prereq
+
+Sim won't be running on docker as it only needs to run on the vms thus install ROS locally following this (tutorial)[https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html]
+
 # Build/ Using
 
-1. `cd /GazeboLearning`
+1. `cd /Overhaul_Simulator`
 
 2. `colcon build --cmake-args -DBUILD_TESTING=ON`
 
