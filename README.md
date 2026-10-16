@@ -8,11 +8,13 @@ Note that if you are having issues with the vm network check if the NAT option i
 
 1. `cd /Overhaul_Simulator`
 
-2. `colcon build --cmake-args -DBUILD_TESTING=ON`
+2. `. ~/ros2_humble/install/local_setup.bash`
 
-3. `source install/setup.bash`
+3. `colcon build --cmake-args -DBUILD_TESTING=ON`
 
-4. `ros2 launch ros_gz_example_bringup diff_drive.launch.py`
+4. `source install/setup.bash`
+
+5. `ros2 launch ros_gz_example_bringup diff_drive.launch.py`
 
 # Shortcut commands
 The following bash script `./run_all.sh` runs all the 
