@@ -1,6 +1,8 @@
 # Prereq
 
-Sim won't be running on docker as it only needs to run on the vms thus install ROS locally following this [tutorial](https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html). Stop once you get to Get ROS 2 Code as we don't need it.
+Sim won't be running on docker as it only needs to run on the vms thus install ROS locally following this [tutorial](https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html). Select binary install version. Stop at Environment setup.
+
+Note that if you are having issues with the vm network check if the NAT option is selected in the VM options. Also verify that the NAT process in running in 'ctrl + r' and type in 'services.msc'. Start it if it is not running to get internet connection.
 
 # Build/ Using
 
