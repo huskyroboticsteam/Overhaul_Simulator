@@ -10,7 +10,7 @@ Now Install: https://gazebosim.org/docs/fortress/install/
 
 1. `cd /Overhaul_Simulator`
 
-2. `. ~/ros2_humble/install/local_setup.bash`
+2. `source /opt/ros/humble/setup.bash`
 
 3. `colcon build --cmake-args -DBUILD_TESTING=ON`
 
