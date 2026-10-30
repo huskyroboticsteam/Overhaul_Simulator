@@ -51,12 +51,15 @@ namespace ros_gz_example_gazebo
                                               "front_left_wheel_joint",
                                               "front_right_wheel_joint"};
 
-  const std::set<std::string> STEERING_UNITS{"back_left_steering_joint"};
+  const std::set<std::string> STEERING_UNITS{"back_left_steering_joint",
+                                             "back_right_steering_joint",
+                                             "front_left_steering_joint",
+                                             "front_right_steering_joint"};
 
   // PID constants
   const double SUCCESS_THRESH = 0.1;
-  const double CONTROL_LOOP_SPEED = 1000; // Speed in hz
-  const double PID_P = 20.0;
+  const double CONTROL_LOOP_SPEED = 100000; // Speed in hz
+  const double PID_P = 10.0;
   const double PID_I = 0.1;
   const double PID_D = 0.1;
 
