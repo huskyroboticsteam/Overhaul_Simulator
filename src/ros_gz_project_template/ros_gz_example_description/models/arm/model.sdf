@@ -1,0 +1,210 @@
+<?xml version="1.0" ?>
+<!--
+  Placeholder arm. Link lengths from the kinematic analysis:
+    AB = 20.523 in = 0.5213 m   (upper arm)
+    BC = 20.175 in = 0.5124 m   (forearm)
+    CD =  8.583 in = 0.2180 m   (hand)
+  Every link frame sits on its joint axis, so the Onshape meshes can replace
+  the <visual> blocks later without touching the joints.
+  Zero pose: AB straight up, BC and CD pointing along +x.
+  Rail (6) moves along y; pitch joints (1, 2, 4) rotate about y.
+  Joint limits and masses are guesses until mechanical gives real numbers.
+-->
+<sdf version="1.8">
+  <model name="arm">
+
+    <joint name="world_fixed" type="fixed">
+      <parent>world</parent>
+      <child>base_link</child>
+    </joint>
+
+    <!-- Rail base -->
+    <link name="base_link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0.025 0 0 0</pose>
+        <mass>5.0</mass>
+        <inertia>
+          <ixx>0.268</ixx><iyy>0.0104</iyy><izz>0.276</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <visual name="visual">
+        <pose>0 0 0.025 0 0 0</pose>
+        <geometry><box><size>0.15 0.8 0.05</size></box></geometry>
+        <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <!-- Rail carriage -->
+    <link name="carriage">
+      <pose>0 0 0.05 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0.025 0 0 0</pose>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.00208</ixx><iyy>0.00208</iyy><izz>0.00375</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <visual name="visual">
+        <pose>0 0 0.025 0 0 0</pose>
+        <geometry><box><size>0.15 0.15 0.05</size></box></geometry>
+        <material><ambient>0.1 0.4 0.8 1</ambient><diffuse>0.1 0.4 0.8 1</diffuse></material>
+      </visual>
+    </link>
+
+    <!-- AB: upper arm, frame at A -->
+    <link name="upper_arm">
+      <pose>0 0 0.10 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0.26065 0 0 0</pose>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.0228</ixx><iyy>0.0228</iyy><izz>0.000313</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <visual name="visual">
+        <pose>0 0 0.26065 0 0 0</pose>
+        <geometry><cylinder><radius>0.025</radius><length>0.5213</length></cylinder></geometry>
+        <material><ambient>0.9 0.2 0.6 1</ambient><diffuse>0.9 0.2 0.6 1</diffuse></material>
+      </visual>
+    </link>
+
+    <!-- Small link between elbow pitch and forearm roll, frame at B -->
+    <link name="elbow_mount">
+      <pose>0 0 0.6213 0 0 0</pose>
+      <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.000064</ixx><iyy>0.000064</iyy><izz>0.000064</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <visual name="visual">
+        <geometry><sphere><radius>0.04</radius></sphere></geometry>
+        <material><ambient>1 0.6 0.1 1</ambient><diffuse>1 0.6 0.1 1</diffuse></material>
+      </visual>
+    </link>
+
+    <!-- BC: forearm, frame at B -->
+    <link name="forearm">
+      <pose>0 0 0.6213 0 0 0</pose>
+      <inertial>
+        <pose>0.2562 0 0 0 0 0</pose>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.000313</ixx><iyy>0.0220</iyy><izz>0.0220</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <visual name="visual">
+        <pose>0.2562 0 0 0 1.5708 0</pose>
+        <geometry><cylinder><radius>0.025</radius><length>0.5124</length></cylinder></geometry>
+        <material><ambient>0.2 0.7 0.2 1</ambient><diffuse>0.2 0.7 0.2 1</diffuse></material>
+      </visual>
+    </link>
+
+    <!-- Small link between wrist pitch and wrist roll, frame at C -->
+    <link name="wrist_mount">
+      <pose>0.5124 0 0.6213 0 0 0</pose>
+      <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.000049</ixx><iyy>0.000049</iyy><izz>0.000049</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <visual name="visual">
+        <geometry><sphere><radius>0.035</radius></sphere></geometry>
+        <material><ambient>0.95 0.9 0.3 1</ambient><diffuse>0.95 0.9 0.3 1</diffuse></material>
+      </visual>
+    </link>
+
+    <!-- CD: hand, frame at C -->
+    <link name="hand">
+      <pose>0.5124 0 0.6213 0 0 0</pose>
+      <inertial>
+        <pose>0.109 0 0 0 0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.000100</ixx><iyy>0.00203</iyy><izz>0.00203</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+      <visual name="visual">
+        <pose>0.109 0 0 0 1.5708 0</pose>
+        <geometry><cylinder><radius>0.02</radius><length>0.218</length></cylinder></geometry>
+        <material><ambient>0.9 0.2 0.2 1</ambient><diffuse>0.9 0.2 0.2 1</diffuse></material>
+      </visual>
+    </link>
+
+    <!-- (6) linear rail -->
+    <joint name="rail_joint" type="prismatic">
+      <parent>base_link</parent>
+      <child>carriage</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit><lower>-0.3</lower><upper>0.3</upper></limit>
+        <dynamics><damping>10</damping></dynamics>
+      </axis>
+    </joint>
+
+    <!-- (1) shoulder pitch at A -->
+    <joint name="shoulder_joint" type="revolute">
+      <parent>carriage</parent>
+      <child>upper_arm</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit><lower>-1.57</lower><upper>1.57</upper></limit>
+        <dynamics><damping>2</damping></dynamics>
+      </axis>
+    </joint>
+
+    <!-- (2) elbow pitch at B -->
+    <joint name="elbow_joint" type="revolute">
+      <parent>upper_arm</parent>
+      <child>elbow_mount</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit><lower>-2.6</lower><upper>2.6</upper></limit>
+        <dynamics><damping>2</damping></dynamics>
+      </axis>
+    </joint>
+
+    <!-- (3) forearm roll along BC -->
+    <joint name="forearm_roll_joint" type="revolute">
+      <parent>elbow_mount</parent>
+      <child>forearm</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit><lower>-3.14</lower><upper>3.14</upper></limit>
+        <dynamics><damping>1</damping></dynamics>
+      </axis>
+    </joint>
+
+    <!-- (4) wrist pitch at C -->
+    <joint name="wrist_pitch_joint" type="revolute">
+      <parent>forearm</parent>
+      <child>wrist_mount</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit><lower>-1.57</lower><upper>1.57</upper></limit>
+        <dynamics><damping>1</damping></dynamics>
+      </axis>
+    </joint>
+
+    <!-- (5) wrist roll along CD -->
+    <joint name="wrist_roll_joint" type="revolute">
+      <parent>wrist_mount</parent>
+      <child>hand</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit><lower>-3.14</lower><upper>3.14</upper></limit>
+        <dynamics><damping>1</damping></dynamics>
+      </axis>
+    </joint>
+
+  </model>
+</sdf>
