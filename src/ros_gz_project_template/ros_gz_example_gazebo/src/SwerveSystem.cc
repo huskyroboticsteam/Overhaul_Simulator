@@ -119,7 +119,7 @@ void SwerveSystem::update_motor_state(gz::sim::EntityComponentManager &_ecm) {
         // std::cout << "Desired angle " << target_angle << std::endl;
 
         // Normalize diff to get optimal direction to travel
-        double angular_dir = std::tan(sin(encoder_val - target_angle) / cos(encoder_val - target_angle));
+        double angular_dir = std::atan2(sin(encoder_val - target_angle), cos(encoder_val - target_angle));
 
         double desired_vel = PID_P * angular_dir;
         desired_vel = desired_vel;
