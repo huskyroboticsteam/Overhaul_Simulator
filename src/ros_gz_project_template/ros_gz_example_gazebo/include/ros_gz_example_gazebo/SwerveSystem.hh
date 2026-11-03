@@ -57,8 +57,9 @@ namespace ros_gz_example_gazebo
                                              "front_right_steering_joint"};
 
   // PID constants
+  // TODO put this into a yaml or some config so we can just fetch this on startup
   const double SUCCESS_THRESH = 0.1;
-  const double CONTROL_LOOP_SPEED = 100000; // Speed in hz
+  const double CONTROL_LOOP_SPEED = 1000000; // Speed in hz
   const double PID_P = 10.0;
   const double PID_I = 0.1;
   const double PID_D = 0.1;
