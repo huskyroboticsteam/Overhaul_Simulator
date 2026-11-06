@@ -206,5 +206,70 @@
       </axis>
     </joint>
 
+    <!-- JOINT CONTROLLER PLUGINS TO CONTROL THE JOINTS (shoulder_joint, elbow_joint, rail_joint, forearm_roll_joint,
+     wrist_pitch_joint, wrist_roll_joint) -->
+
+        <!-- Holds shoulder_joint at the angle sent on
+         /model/arm/joint/shoulder_joint/0/cmd_pos (radians). Starts at 0 = upright. -->
+    <plugin
+      filename="ignition-gazebo-joint-position-controller-system"
+      name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>shoulder_joint</joint_name>
+      <p_gain>100</p_gain>
+      <i_gain>1</i_gain>
+      <d_gain>10</d_gain>
+    </plugin>
+
+        <!-- Holds elbow_joint at the angle sent on
+         /model/arm/joint/elbow_joint/0/cmd_pos (radians). Starts at 0 = BC horizontal. -->
+    <plugin
+      filename="ignition-gazebo-joint-position-controller-system"
+      name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>elbow_joint</joint_name>
+      <p_gain>100</p_gain>
+      <i_gain>1</i_gain>
+      <d_gain>10</d_gain>
+    </plugin>
+
+        <!-- Rail position in meters along y. Starts at 0 = middle of the rail. -->
+    <plugin
+      filename="ignition-gazebo-joint-position-controller-system"
+      name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>rail_joint</joint_name>
+      <p_gain>1000</p_gain>
+      <i_gain>1</i_gain>
+      <d_gain>100</d_gain>
+    </plugin>
+
+    <!-- Forearm roll in radians. Starts at 0. -->
+    <plugin
+      filename="ignition-gazebo-joint-position-controller-system"
+      name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>forearm_roll_joint</joint_name>
+      <p_gain>10</p_gain>
+      <i_gain>1</i_gain>
+      <d_gain>0.15</d_gain>
+    </plugin>
+
+    <!-- Wrist pitch in radians. Starts at 0 = CD in line with BC. -->
+    <plugin
+      filename="ignition-gazebo-joint-position-controller-system"
+      name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>wrist_pitch_joint</joint_name>
+      <p_gain>30</p_gain>
+      <i_gain>1</i_gain>
+      <d_gain>1</d_gain>
+    </plugin>
+
+    <!-- Wrist roll in radians. Starts at 0. -->
+    <plugin
+      filename="ignition-gazebo-joint-position-controller-system"
+      name="ignition::gazebo::systems::JointPositionController">
+      <joint_name>wrist_roll_joint</joint_name>
+      <p_gain>2</p_gain>
+      <i_gain>0</i_gain>
+      <d_gain>0.02</d_gain>
+    </plugin>
+    
   </model>
 </sdf>
