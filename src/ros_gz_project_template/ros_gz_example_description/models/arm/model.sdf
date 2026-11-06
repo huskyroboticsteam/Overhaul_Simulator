@@ -270,6 +270,13 @@
       <i_gain>0</i_gain>
       <d_gain>0.02</d_gain>
     </plugin>
-    
+
+        <!-- Simulated encoders: publishes every joint's position, velocity and effort. -->
+    <plugin
+      filename="ignition-gazebo-joint-state-publisher-system"
+      name="ignition::gazebo::systems::JointStatePublisher">
+      <topic>/arm/joint_states</topic>
+    </plugin>
+
   </model>
 </sdf>
