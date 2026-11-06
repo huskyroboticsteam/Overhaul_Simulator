@@ -29,6 +29,46 @@
   gz_type_name: "gz.msgs.Twist"
   direction: ROS_TO_GZ
 
+# Arm commands (ROS -> GZ). Radians, except rail_joint in meters.
+- ros_topic_name: "/arm/rail_joint/cmd_pos"
+  gz_topic_name: "/model/arm/joint/rail_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/arm/shoulder_joint/cmd_pos"
+  gz_topic_name: "/model/arm/joint/shoulder_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/arm/elbow_joint/cmd_pos"
+  gz_topic_name: "/model/arm/joint/elbow_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/arm/forearm_roll_joint/cmd_pos"
+  gz_topic_name: "/model/arm/joint/forearm_roll_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/arm/wrist_pitch_joint/cmd_pos"
+  gz_topic_name: "/model/arm/joint/wrist_pitch_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/arm/wrist_roll_joint/cmd_pos"
+  gz_topic_name: "/model/arm/joint/wrist_roll_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  direction: ROS_TO_GZ
+
+# Arm feedback (GZ -> ROS)
+- ros_topic_name: "/arm/joint_states"
+  gz_topic_name: "/arm/joint_states"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  gz_type_name: "gz.msgs.Model"
+  direction: GZ_TO_ROS
+
+
 # Tutorial stuff
 - ros_topic_name: "/clock"
   gz_topic_name: "/clock"
