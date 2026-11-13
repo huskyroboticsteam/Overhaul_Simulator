@@ -1,0 +1,16 @@
+services:
+  sim:
+    build: .
+    image: overhaul-sim
+    # Ports bound to localhost only; VNC password defaults to "dockervnc"
+    ports:
+      - "127.0.0.1:5901:5901"
+      - "127.0.0.1:6080:6080"
+    shm_size: 1gb  # Gazebo transport needs more than Docker's 64MB default
+    environment:
+      ROS_DOMAIN_ID: "42"
+      # VNC_PASSWORD: dockervnc
+    # Default: the stock diff-drive sim. For the sim with the Overhaul rover/drive nodes:
+    # command: ros2 launch rover rover_sim_launch.py
+    stdin_open: true
+    tty: true
