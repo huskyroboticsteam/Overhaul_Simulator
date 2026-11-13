@@ -6,6 +6,21 @@ Note that if you are having issues with the vm network check if the NAT option i
 
 Now Install: https://gazebosim.org/docs/fortress/install/ 
 
+# Docker
+
+The simulator can also run in a container (ROS 2 Humble + Ignition Fortress + the Overhaul packages). It's based on the Docker setup in the Overhaul repo. The GUI (Gazebo, RViz) runs in a VNC desktop with software rendering, so no GPU or X server is needed on the host.
+
+```bash
+docker compose up --build
+```
+
+Then open http://localhost:6080/vnc.html in a browser, or point a VNC client at `localhost:5901`. The password is `dockervnc`; set `VNC_PASSWORD` to change it.
+
+- By default this launches `diff_drive.launch.py`. For the sim with the Overhaul rover/drive nodes, run `docker compose run --rm --service-ports sim ros2 launch rover rover_sim_launch.py`
+- To get a shell instead: `docker compose run --rm --service-ports sim bash` (the workspace is already built and sourced)
+- To open a second terminal in a running container: `docker compose exec sim bash`
+- The image is built from `src/`, so rebuild it (`--build`) after code changes. For iterative work, use the VS Code devcontainer (*Reopen in Container*), which bind-mounts the repo and builds it in place.
+
 # Build/ Using
 
 1. `cd /Overhaul_Simulator`
