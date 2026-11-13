@@ -48,6 +48,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-humble-sdformat-urdf \
     && rm -rf /var/lib/apt/lists/*
 
+# Rerun C++ SDK for streaming the robot to a Rerun viewer on the host (urdf_to_rerun).
+# Built once here (it compiles a minimal Apache Arrow) and installed to /opt/rerun_cpp_sdk,
+# where ros_gz_example_bringup finds it. Keep RERUN_VERSION equal to the viewer's.
+ARG RERUN_VERSION=0.28.1
+RUN apt-get update && apt-get install -y --no-install-recommends curl unzip \
+    && rm -rf /var/lib/apt/lists/* \
+    && cd /tmp \
+    && curl -fsSL -o rerun_cpp_sdk.zip \
+        "https://github.com/rerun-io/rerun/releases/download/${RERUN_VERSION}/rerun_cpp_sdk.zip" \
+    && unzip -q rerun_cpp_sdk.zip \
+    && cmake -S rerun_cpp_sdk -B rerun_build -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/opt/rerun_cpp_sdk -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+    && cmake --build rerun_build -j"$(nproc)" \
+    && cmake --install rerun_build \
+    && rm -rf /tmp/rerun_cpp_sdk.zip /tmp/rerun_cpp_sdk /tmp/rerun_build
+
 # No GPU in the container: render Gazebo/RViz with Mesa's software rasterizer
 ENV LIBGL_ALWAYS_SOFTWARE=1 \
     DISPLAY=:1 \
