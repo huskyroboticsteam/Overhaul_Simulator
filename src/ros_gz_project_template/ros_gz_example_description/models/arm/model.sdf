@@ -206,69 +206,56 @@
       </axis>
     </joint>
 
-    <!-- JOINT CONTROLLER PLUGINS TO CONTROL THE JOINTS (shoulder_joint, elbow_joint, rail_joint, forearm_roll_joint,
-     wrist_pitch_joint, wrist_roll_joint) -->
 
-        <!-- Holds shoulder_joint at the angle sent on
-         /model/arm/joint/shoulder_joint/0/cmd_pos (radians). Starts at 0 = upright. -->
-    <plugin
-      filename="ignition-gazebo-joint-position-controller-system"
-      name="ignition::gazebo::systems::JointPositionController">
-      <joint_name>shoulder_joint</joint_name>
-      <p_gain>100</p_gain>
-      <i_gain>1</i_gain>
-      <d_gain>10</d_gain>
-    </plugin>
+    <!-- Velocity controllers: each joint moves at the speed sent on /arm/<joint>/cmd_vel.
+         0 (or no command) = hold still. -->
 
-        <!-- Holds elbow_joint at the angle sent on
-         /model/arm/joint/elbow_joint/0/cmd_pos (radians). Starts at 0 = BC horizontal. -->
+    <!-- Rail along y, m/s -->
     <plugin
-      filename="ignition-gazebo-joint-position-controller-system"
-      name="ignition::gazebo::systems::JointPositionController">
-      <joint_name>elbow_joint</joint_name>
-      <p_gain>100</p_gain>
-      <i_gain>1</i_gain>
-      <d_gain>10</d_gain>
-    </plugin>
-
-        <!-- Rail position in meters along y. Starts at 0 = middle of the rail. -->
-    <plugin
-      filename="ignition-gazebo-joint-position-controller-system"
-      name="ignition::gazebo::systems::JointPositionController">
+      filename="ignition-gazebo-joint-controller-system"
+      name="ignition::gazebo::systems::JointController">
       <joint_name>rail_joint</joint_name>
-      <p_gain>1000</p_gain>
-      <i_gain>1</i_gain>
-      <d_gain>100</d_gain>
+      <topic>/arm/rail_joint/cmd_vel</topic>
     </plugin>
 
-    <!-- Forearm roll in radians. Starts at 0. -->
+    <!-- Shoulder pitch at A, rad/s -->
     <plugin
-      filename="ignition-gazebo-joint-position-controller-system"
-      name="ignition::gazebo::systems::JointPositionController">
+      filename="ignition-gazebo-joint-controller-system"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>shoulder_joint</joint_name>
+      <topic>/arm/shoulder_joint/cmd_vel</topic>
+    </plugin>
+
+    <!-- Elbow pitch at B, rad/s -->
+    <plugin
+      filename="ignition-gazebo-joint-controller-system"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>elbow_joint</joint_name>
+      <topic>/arm/elbow_joint/cmd_vel</topic>
+    </plugin>
+
+    <!-- Forearm roll along BC, rad/s -->
+    <plugin
+      filename="ignition-gazebo-joint-controller-system"
+      name="ignition::gazebo::systems::JointController">
       <joint_name>forearm_roll_joint</joint_name>
-      <p_gain>10</p_gain>
-      <i_gain>1</i_gain>
-      <d_gain>0.15</d_gain>
+      <topic>/arm/forearm_roll_joint/cmd_vel</topic>
     </plugin>
 
-    <!-- Wrist pitch in radians. Starts at 0 = CD in line with BC. -->
+    <!-- Wrist pitch at C, rad/s -->
     <plugin
-      filename="ignition-gazebo-joint-position-controller-system"
-      name="ignition::gazebo::systems::JointPositionController">
+      filename="ignition-gazebo-joint-controller-system"
+      name="ignition::gazebo::systems::JointController">
       <joint_name>wrist_pitch_joint</joint_name>
-      <p_gain>30</p_gain>
-      <i_gain>1</i_gain>
-      <d_gain>1</d_gain>
+      <topic>/arm/wrist_pitch_joint/cmd_vel</topic>
     </plugin>
 
-    <!-- Wrist roll in radians. Starts at 0. -->
+    <!-- Wrist roll along CD, rad/s -->
     <plugin
-      filename="ignition-gazebo-joint-position-controller-system"
-      name="ignition::gazebo::systems::JointPositionController">
+      filename="ignition-gazebo-joint-controller-system"
+      name="ignition::gazebo::systems::JointController">
       <joint_name>wrist_roll_joint</joint_name>
-      <p_gain>2</p_gain>
-      <i_gain>0</i_gain>
-      <d_gain>0.02</d_gain>
+      <topic>/arm/wrist_roll_joint/cmd_vel</topic>
     </plugin>
 
         <!-- Simulated encoders: publishes every joint's position, velocity and effort. -->
