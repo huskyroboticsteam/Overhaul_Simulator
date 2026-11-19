@@ -21,21 +21,24 @@ Then open http://localhost:6080/vnc.html in a browser, or point a VNC client at 
 - To open a second terminal in a running container: `docker compose exec sim bash`
 - The image is built from `src/`, so rebuild it (`--build`) after code changes. For iterative work, use the VS Code devcontainer (*Reopen in Container*), which bind-mounts the repo and builds it in place.
 
+# Local setup
+
+For those who are working in the Vmware setup most of the rerun visualizers are not supported (yet). This is fixed via using rviz instead to visualize data.
+
 # Build/ Using
 
 1. `cd /Overhaul_Simulator`
 
-2. `source /opt/ros/humble/setup.bash`\
-    -   If you are in the vmware VM use the instruction `. ~/ros2_humble/install/local_setup.bash`
+2. `source /opt/ros/humble/setup.bash`
 
 3. `colcon build --cmake-args -DBUILD_TESTING=ON`
 
 4. `source install/setup.bash`
 
-5. `ros2 launch ros_gz_example_bringup diff_drive.launch.py`
+## Helpful launch scripts
 
-# Shortcut commands
-The following bash script `./run_all.sh` runs all the 
+For launching rover model in simple sim
+`ros2 launch ros_gz_example_bringup dy2026_rviz.launch.py `
 
 # Testing
 To send a raw command over the cli to the active node you can do `ign topic -t "/Direction" -m ignition.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}"`
