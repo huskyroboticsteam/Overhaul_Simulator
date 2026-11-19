@@ -38,9 +38,9 @@ DEFAULT_SOURCE = os.path.join(HERE, '..', 'models', 'dy2026_masterassembly')
 DEFAULT_OUT = os.path.join(HERE, '..', 'models', 'dy2026_simple', 'urdf', 'dy2026_simple.urdf')
 
 # Parts whose bounding box is smaller than this (largest side, metres) get no geometry
-MIN_PART_SIZE = 0.07
+MIN_PART_SIZE = 0.1
 # Only the largest shapes of each link are kept (by volume)
-MAX_SHAPES_PER_LINK = 10
+MAX_SHAPES_PER_LINK = 15
 MAX_SHAPES_BASE = 16
 # Root-link parts count as touching when their bounding boxes are within this distance
 TOUCH_TOLERANCE = 0.005
@@ -573,6 +573,23 @@ def write_urdf(path, W_new, joints, links, color_of, height):
         ET.SubElement(el, 'parent', link=j['parent'])
         ET.SubElement(el, 'child', link=j['child'])
         ET.SubElement(el, 'axis', xyz='0 0 1')
+        if j['type'] in ('revolute', 'prismatic', 'continuous'):
+            if j['type'] == 'prismatic':
+                damping = '100'
+                friction = '10'
+            elif j['name'].startswith('wheel_'):
+                damping = '20'
+                friction = '5'
+            elif j['name'].startswith('steer_'):
+                damping = '50'
+                friction = '10'
+            elif j['name'].startswith('arm_'):
+                damping = '30'
+                friction = '5'
+            else:
+                damping = '20'
+                friction = '5'
+            ET.SubElement(el, 'dynamics', damping=damping, friction=friction)
         if j['type'] in ('revolute', 'prismatic'):
             ET.SubElement(el, 'limit', lower=f"{j['lower']:.6g}", upper=f"{j['upper']:.6g}",
                           effort='100', velocity='1')
