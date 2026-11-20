@@ -8,22 +8,22 @@
 #include <gz/plugin/Register.hh>
 
 // Don't forget to include the plugin's header.
-#include "ros_gz_example_gazebo/SwerveSystem.hh"
+#include "sim_gazebo/SwerveSystem.hh"
 
 // This is required to register the plugin. Make sure the interfaces match
 // what's in the header.
 IGNITION_ADD_PLUGIN(
-    ros_gz_example_gazebo::SwerveSystem,
+    sim_gazebo::SwerveSystem,
     gz::sim::System,
-    ros_gz_example_gazebo::SwerveSystem::ISystemConfigure,
-    ros_gz_example_gazebo::SwerveSystem::ISystemPreUpdate,
-    ros_gz_example_gazebo::SwerveSystem::ISystemUpdate,
-    ros_gz_example_gazebo::SwerveSystem::ISystemPostUpdate
+    sim_gazebo::SwerveSystem::ISystemConfigure,
+    sim_gazebo::SwerveSystem::ISystemPreUpdate,
+    sim_gazebo::SwerveSystem::ISystemUpdate,
+    sim_gazebo::SwerveSystem::ISystemPostUpdate
 )
 
 using namespace std::placeholders;
 
-namespace ros_gz_example_gazebo 
+namespace sim_gazebo 
 {
 
 void SwerveSystem::Configure(const gz::sim::Entity &_entity,
@@ -67,7 +67,7 @@ void SwerveSystem::PreUpdate(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "ros_gz_example_gazebo::SwerveSystem::PreUpdate" << std::endl;
+    igndbg << "sim_gazebo::SwerveSystem::PreUpdate" << std::endl;
   }
 
   // Motor control refresh
@@ -138,7 +138,7 @@ void SwerveSystem::Update(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "ros_gz_example_gazebo::SwerveSystem::Update" << std::endl;
+    igndbg << "sim_gazebo::SwerveSystem::Update" << std::endl;
   }
 }
 
@@ -147,7 +147,7 @@ void SwerveSystem::PostUpdate(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "ros_gz_example_gazebo::SwerveSystem::PostUpdate" << std::endl;
+    igndbg << "sim_gazebo::SwerveSystem::PostUpdate" << std::endl;
   }
 }
 
@@ -162,4 +162,4 @@ void SwerveSystem::handle_command(const gz::msgs::Twist &_msg, std::string _mt, 
   this->motor_name_to_velocity[_mt] = _msg.linear().x();
   this->motor_name_to_rot[_rot_mt] = _msg.angular().x();
 }
-}  // namespace ros_gz_example_gazebo
+}  // namespace sim_gazebo

@@ -13,7 +13,7 @@
 """Visualize the simplified dy2026 rover (boxes and cylinders) in Rerun.
 
 The URDF is generated from the Onshape export by
-ros_gz_example_description/tools/simplify_dy2026.py.
+sim_description/tools/simplify_dy2026.py.
 
 Start the viewer on your machine (`rerun`), then run this launch file.
 From the Docker container the default rerun_url reaches the host's viewer.
@@ -38,7 +38,10 @@ MODEL_NAME = 'dy2026_simple'
 
 
 def generate_launch_description():
-    pkg_project_description = get_package_share_directory('ros_gz_example_description')
+    pkg_project_description = get_package_share_directory('sim_description')
+    pkg_project_gazebo = get_package_share_directory('sim_gazebo')
+    pkg_rover = get_package_share_directory('rover')
+    pkg_project_bringup = get_package_share_directory('sim_bringup')
 
     urdf_file = os.path.join(
         pkg_project_description, 'models', MODEL_NAME, 'urdf', f'{MODEL_NAME}.urdf')
@@ -46,6 +49,31 @@ def generate_launch_description():
         robot_desc = infp.read()
 
     use_gui = LaunchConfiguration('use_gui')
+    # Overhaul Nodes
+    rover = Node(
+        package='rover',
+        executable='Rover',
+        name='rover',
+        output='both',
+        parameters=[{'peripheral': 'launch'}],)
+
+    drive = Node(
+        package='rover',
+        executable='Drive',
+        name='Drive',
+        output='both',)
+
+     # Bridge ROS topics and Gazebo messages for establishing communication
+    bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        parameters=[{
+            'config_file': os.path.join(pkg_project_bringup, 'config', 'sim_bridge.yaml'),
+            'qos_overrides./tf_static.publisher.durability': 'transient_local',
+        }],
+        output='screen'
+    )
+
 
     # Slider GUI for moving the joints by hand
     joint_state_publisher_gui = Node(
@@ -87,7 +115,7 @@ def generate_launch_description():
 
     # Stream the model to a Rerun viewer (C++ node, needs the Rerun C++ SDK at build time)
     urdf_to_rerun = Node(
-        package='ros_gz_example_bringup',
+        package='sim_bringup',
         executable='urdf_to_rerun',
         name='urdf_to_rerun',
         output='screen',
@@ -113,5 +141,8 @@ def generate_launch_description():
             robot_state_publisher,
             map_to_footprint,
             urdf_to_rerun,
+            drive, 
+            rover, 
+            bridge, 
         ]),
     ])

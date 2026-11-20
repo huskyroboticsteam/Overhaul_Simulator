@@ -25,20 +25,20 @@
 #include <gz/plugin/Register.hh>
 
 // Don't forget to include the plugin's header.
-#include "ros_gz_example_gazebo/FullSystem.hh"
+#include "sim_gazebo/FullSystem.hh"
 
 // This is required to register the plugin. Make sure the interfaces match
 // what's in the header.
 IGNITION_ADD_PLUGIN(
-    ros_gz_example_gazebo::FullSystem,
+    sim_gazebo::FullSystem,
     gz::sim::System,
-    ros_gz_example_gazebo::FullSystem::ISystemConfigure,
-    ros_gz_example_gazebo::FullSystem::ISystemPreUpdate,
-    ros_gz_example_gazebo::FullSystem::ISystemUpdate,
-    ros_gz_example_gazebo::FullSystem::ISystemPostUpdate
+    sim_gazebo::FullSystem::ISystemConfigure,
+    sim_gazebo::FullSystem::ISystemPreUpdate,
+    sim_gazebo::FullSystem::ISystemUpdate,
+    sim_gazebo::FullSystem::ISystemPostUpdate
 )
 
-namespace ros_gz_example_gazebo 
+namespace sim_gazebo 
 {
 
 void FullSystem::Configure(const gz::sim::Entity &_entity,
@@ -46,7 +46,7 @@ void FullSystem::Configure(const gz::sim::Entity &_entity,
                 gz::sim::EntityComponentManager &_ecm,
                 gz::sim::EventManager &_eventManager)
 {
-  igndbg << "ros_gz_example_gazebo::FullSystem::Configure on entity: " << _entity << std::endl;
+  igndbg << "sim_gazebo::FullSystem::Configure on entity: " << _entity << std::endl;
 }
 
 void FullSystem::PreUpdate(const gz::sim::UpdateInfo &_info,
@@ -54,7 +54,7 @@ void FullSystem::PreUpdate(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "ros_gz_example_gazebo::FullSystem::PreUpdate" << std::endl;
+    igndbg << "sim_gazebo::FullSystem::PreUpdate" << std::endl;
   }
 }
 
@@ -63,7 +63,7 @@ void FullSystem::Update(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "ros_gz_example_gazebo::FullSystem::Update" << std::endl;
+    igndbg << "sim_gazebo::FullSystem::Update" << std::endl;
   }
 }
 
@@ -72,8 +72,8 @@ void FullSystem::PostUpdate(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "ros_gz_example_gazebo::FullSystem::PostUpdate" << std::endl;
+    igndbg << "sim_gazebo::FullSystem::PostUpdate" << std::endl;
   }
 }
 
-}  // namespace ros_gz_example_gazebo
+}  // namespace sim_gazebo

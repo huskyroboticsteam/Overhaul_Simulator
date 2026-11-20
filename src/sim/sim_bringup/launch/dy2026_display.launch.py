@@ -1,3 +1,5 @@
+# Copyright 2026 Overhaul
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -10,17 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Visualize the simplified dy2026 rover (boxes and cylinders) in Rerun.
-
-The URDF is generated from the Onshape export by
-ros_gz_example_description/tools/simplify_dy2026.py.
+"""Visualize the dy2026 master assembly (Onshape URDF export) in Rerun.
 
 Start the viewer on your machine (`rerun`), then run this launch file.
 From the Docker container the default rerun_url reaches the host's viewer.
-
-Everything runs in the /dy2026_simple namespace (robot_description, joint_states), so
-it can run alongside dy2026_display.launch.py without the two models mixing; TF is
-global, and the link names don't overlap.
 """
 
 import os
@@ -28,52 +23,31 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, GroupAction
+from launch.actions import DeclareLaunchArgument
 from launch.conditions import IfCondition, UnlessCondition
 from launch.substitutions import LaunchConfiguration
 
-from launch_ros.actions import Node, PushRosNamespace
+from launch_ros.actions import Node
 
-MODEL_NAME = 'dy2026_simple'
+MODEL_NAME = 'dy2026_masterassembly'
 
 
 def generate_launch_description():
-    pkg_project_description = get_package_share_directory('ros_gz_example_description')
-    pkg_project_gazebo = get_package_share_directory('ros_gz_example_gazebo')
-    pkg_rover = get_package_share_directory('rover')
-    pkg_project_bringup = get_package_share_directory('ros_gz_example_bringup')
+    pkg_project_description = get_package_share_directory('sim_description')
 
     urdf_file = os.path.join(
         pkg_project_description, 'models', MODEL_NAME, 'urdf', f'{MODEL_NAME}.urdf')
     with open(urdf_file, 'r') as infp:
         robot_desc = infp.read()
 
+    # The Onshape exporter writes mesh URIs as package://dy2026_masterassembly/...,
+    # but the model is installed inside sim_description, so point the
+    # URIs at the installed location instead of editing the generated URDF.
+    robot_desc = robot_desc.replace(
+        f'package://{MODEL_NAME}/',
+        f'package://sim_description/models/{MODEL_NAME}/')
+
     use_gui = LaunchConfiguration('use_gui')
-    # Overhaul Nodes
-    rover = Node(
-        package='rover',
-        executable='Rover',
-        name='rover',
-        output='both',
-        parameters=[{'peripheral': 'launch'}],)
-
-    drive = Node(
-        package='rover',
-        executable='Drive',
-        name='Drive',
-        output='both',)
-
-     # Bridge ROS topics and Gazebo messages for establishing communication
-    bridge = Node(
-        package='ros_gz_bridge',
-        executable='parameter_bridge',
-        parameters=[{
-            'config_file': os.path.join(pkg_project_bringup, 'config', 'ros_gz_example_bridge.yaml'),
-            'qos_overrides./tf_static.publisher.durability': 'transient_local',
-        }],
-        output='screen'
-    )
-
 
     # Slider GUI for moving the joints by hand
     joint_state_publisher_gui = Node(
@@ -105,17 +79,17 @@ def generate_launch_description():
         ],
     )
 
-    # The rover stands on the map origin
-    map_to_footprint = Node(
+    # Anchor the URDF's root link to a map frame
+    map_to_root = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
-        name='map_to_base_footprint',
-        arguments=['--frame-id', 'map', '--child-frame-id', 'base_footprint'],
+        name='map_to_root',
+        arguments=['--frame-id', 'map', '--child-frame-id', 'root'],
     )
 
     # Stream the model to a Rerun viewer (C++ node, needs the Rerun C++ SDK at build time)
     urdf_to_rerun = Node(
-        package='ros_gz_example_bringup',
+        package='sim_bringup',
         executable='urdf_to_rerun',
         name='urdf_to_rerun',
         output='screen',
@@ -134,15 +108,9 @@ def generate_launch_description():
         DeclareLaunchArgument('use_gui', default_value='false',
                               description='Use joint_state_publisher_gui sliders '
                                           '(needs the container desktop).'),
-        GroupAction([
-            PushRosNamespace(MODEL_NAME),
-            joint_state_publisher_gui,
-            joint_state_publisher,
-            robot_state_publisher,
-            map_to_footprint,
-            urdf_to_rerun,
-            drive, 
-            rover, 
-            bridge, 
-        ]),
+        joint_state_publisher_gui,
+        joint_state_publisher,
+        robot_state_publisher,
+        map_to_root,
+        urdf_to_rerun,
     ])
