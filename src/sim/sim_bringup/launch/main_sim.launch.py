@@ -34,6 +34,8 @@ from launch.substitutions import LaunchConfiguration
 
 from launch_ros.actions import Node, PushRosNamespace
 
+import xacro
+
 MODEL_NAME = 'dy2026_simple'
 
 
@@ -44,9 +46,8 @@ def generate_launch_description():
     pkg_project_bringup = get_package_share_directory('sim_bringup')
 
     urdf_file = os.path.join(
-        pkg_project_description, 'models', MODEL_NAME, 'urdf', f'{MODEL_NAME}.urdf')
-    with open(urdf_file, 'r') as infp:
-        robot_desc = infp.read()
+        pkg_project_description, 'models', MODEL_NAME, 'urdf', f'{MODEL_NAME}.urdf.xacro')
+    robot_desc = xacro.process_file(urdf_file).toxml()
 
     use_gui = LaunchConfiguration('use_gui')
     # Overhaul Nodes
