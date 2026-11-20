@@ -121,6 +121,33 @@ def generate_launch_description():
        condition=IfCondition(LaunchConfiguration('rviz'))
     )
 
+    # Bridge ROS topics and Gazebo messages for establishing communication
+    bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        parameters=[{
+            'config_file': os.path.join(pkg_project_bringup, 'config', 'ros_gz_example_bridge.yaml'),
+            'qos_overrides./tf_static.publisher.durability': 'transient_local',
+        }],
+        output='screen'
+    )
+
+    # Rover nodes. The following nodes normally run on the rover hower interface
+    # with out emulated robot interfaces
+
+    rover = Node(
+        package='rover',
+        executable='Rover',
+        name='rover',
+        output='both',
+        parameters=[{'peripheral': 'launch'}],)
+
+    drive = Node(
+        package='rover',
+        executable='Drive',
+        name='Drive',
+        output='both',)
+
     return LaunchDescription([
         DeclareLaunchArgument('rerun_url',
                               default_value='rerun+http://host.docker.internal:9876/proxy',
@@ -138,6 +165,9 @@ def generate_launch_description():
             map_to_footprint,
             rviz,
             gz_sim,
+            rover,
+            drive,
+            bridge,
         ]),
         # Incredibly dumb but for some reason URDF cannot pull in the 
         TimerAction(
