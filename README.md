@@ -4,7 +4,9 @@ Sim won't be running on docker as it only needs to run on the vms thus install R
 
 Note that if you are having issues with the vm network check if the NAT option is selected in the VM options. Also verify that the NAT process in running in 'ctrl + r' and type in 'services.msc'. Start it if it is not running to get internet connection.
 
-Now Install: https://gazebosim.org/docs/fortress/install/ 
+First follow the isntructions for the binary install: https://gazebosim.org/docs/fortress/install_ubuntu/
+
+Then install: https://gazebosim.org/docs/fortress/ros_installation/
 
 # Build/ Using
 
