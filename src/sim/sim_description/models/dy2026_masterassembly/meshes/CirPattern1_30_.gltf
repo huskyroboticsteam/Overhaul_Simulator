@@ -3,24 +3,24 @@
         {
             "bufferView": 0,
             "componentType": 5126,
-            "count": 30,
+            "count": 59,
             "max": [
                 -0.015520400367677212,
                 0.0009907323401421309,
                 0.013646161183714867
             ],
             "min": [
-                -0.016754010692238808,
+                -0.01675763726234436,
                 -0.0009907323401421309,
-                0.012099262326955795
+                0.012094714678823948
             ],
-            "name": "mesh2288_coord_accessor",
+            "name": "mesh39717_coord_accessor",
             "type": "VEC3"
         },
         {
             "bufferView": 1,
             "componentType": 5126,
-            "count": 30,
+            "count": 59,
             "max": [
                 -0.7818315029144287,
                 -0.0,
@@ -31,90 +31,90 @@
                 -0.0,
                 0.6234897971153259
             ],
-            "name": "mesh2288_norm_accessor",
+            "name": "mesh39717_norm_accessor",
             "type": "VEC3"
         },
         {
             "bufferView": 2,
             "componentType": 5125,
-            "count": 87,
+            "count": 174,
             "max": [
-                29
+                58
             ],
             "min": [
                 0
             ],
-            "name": "mesh2288_idx_accessor",
+            "name": "mesh39717_idx_accessor",
             "type": "SCALAR"
         },
         {
             "bufferView": 3,
             "componentType": 5126,
-            "count": 58,
+            "count": 116,
             "max": [
                 -0.011808842420578003,
                 0.0009907323401421309,
                 0.013646161183714867
             ],
             "min": [
-                -0.016754010692238808,
+                -0.01675763726234436,
                 -0.0009907323401421309,
-                0.009139393456280231
+                0.009134846739470959
             ],
-            "name": "mesh2289_coord_accessor",
+            "name": "mesh39718_coord_accessor",
             "type": "VEC3"
         },
         {
             "bufferView": 4,
             "componentType": 5126,
-            "count": 58,
+            "count": 116,
             "max": [
                 0.6234897971153259,
                 0.9985334277153015,
                 0.7818315029144287
             ],
             "min": [
-                -0.6198348999023438,
+                -0.6234897971153259,
                 -0.9985334277153015,
-                -0.7772483825683594
+                -0.7818315029144287
             ],
-            "name": "mesh2289_norm_accessor",
+            "name": "mesh39718_norm_accessor",
             "type": "VEC3"
         },
         {
             "bufferView": 5,
             "componentType": 5125,
-            "count": 174,
+            "count": 348,
             "max": [
-                57
+                115
             ],
             "min": [
                 0
             ],
-            "name": "mesh2289_idx_accessor",
+            "name": "mesh39718_idx_accessor",
             "type": "SCALAR"
         },
         {
             "bufferView": 6,
             "componentType": 5126,
-            "count": 30,
+            "count": 59,
             "max": [
                 -0.011808842420578003,
                 0.0009907323401421309,
                 0.010686293244361877
             ],
             "min": [
-                -0.013042453676462173,
+                -0.013046080246567726,
                 -0.0009907323401421309,
-                0.009139393456280231
+                0.009134846739470959
             ],
-            "name": "mesh2290_coord_accessor",
+            "name": "mesh39719_coord_accessor",
             "type": "VEC3"
         },
         {
             "bufferView": 7,
             "componentType": 5126,
-            "count": 30,
+            "count": 59,
             "max": [
                 0.7818315029144287,
                 -0.0,
@@ -125,20 +125,20 @@
                 -0.0,
                 -0.6234897971153259
             ],
-            "name": "mesh2290_norm_accessor",
+            "name": "mesh39719_norm_accessor",
             "type": "VEC3"
         },
         {
             "bufferView": 8,
             "componentType": 5125,
-            "count": 87,
+            "count": 174,
             "max": [
-                29
+                58
             ],
             "min": [
                 0
             ],
-            "name": "mesh2290_idx_accessor",
+            "name": "mesh39719_idx_accessor",
             "type": "SCALAR"
         }
     ],
@@ -149,117 +149,78 @@
     "bufferViews": [
         {
             "buffer": 0,
-            "byteLength": 360,
-            "name": "mesh2288_coord_bufferView",
+            "byteLength": 708,
+            "name": "mesh39717_coord_bufferView",
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteLength": 360,
-            "byteOffset": 360,
-            "name": "mesh2288_norm_bufferView",
+            "byteLength": 708,
+            "byteOffset": 708,
+            "name": "mesh39717_norm_bufferView",
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteLength": 348,
-            "byteOffset": 720,
-            "name": "mesh2288_idx_bufferView",
+            "byteLength": 696,
+            "byteOffset": 1416,
+            "name": "mesh39717_idx_bufferView",
             "target": 34963
         },
         {
             "buffer": 0,
-            "byteLength": 696,
-            "byteOffset": 1068,
-            "name": "mesh2289_coord_bufferView",
+            "byteLength": 1392,
+            "byteOffset": 2112,
+            "name": "mesh39718_coord_bufferView",
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteLength": 696,
-            "byteOffset": 1764,
-            "name": "mesh2289_norm_bufferView",
+            "byteLength": 1392,
+            "byteOffset": 3504,
+            "name": "mesh39718_norm_bufferView",
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteLength": 696,
-            "byteOffset": 2460,
-            "name": "mesh2289_idx_bufferView",
+            "byteLength": 1392,
+            "byteOffset": 4896,
+            "name": "mesh39718_idx_bufferView",
             "target": 34963
         },
         {
             "buffer": 0,
-            "byteLength": 360,
-            "byteOffset": 3156,
-            "name": "mesh2290_coord_bufferView",
+            "byteLength": 708,
+            "byteOffset": 6288,
+            "name": "mesh39719_coord_bufferView",
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteLength": 360,
-            "byteOffset": 3516,
-            "name": "mesh2290_norm_bufferView",
+            "byteLength": 708,
+            "byteOffset": 6996,
+            "name": "mesh39719_norm_bufferView",
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteLength": 348,
-            "byteOffset": 3876,
-            "name": "mesh2290_idx_bufferView",
+            "byteLength": 696,
+            "byteOffset": 7704,
+            "name": "mesh39719_idx_bufferView",
             "target": 34963
         }
     ],
     "buffers": [
         {
-            "byteLength": 4224,
+            "byteLength": 8400,
             "name": "Total_buffer",
-            "uri": "data:application/octet-stream;base64,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HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/AAAAAAEAAAACAAAAAgAAAAMAAAAAAAAAAwAAAAQAAAAAAAAABAAAAAUAAAAAAAAABQAAAAYAAAAAAAAABgAAAAcAAAAAAAAABwAAAAgAAAAAAAAACAAAAAkAAAAAAAAACQAAAAoAAAAAAAAACgAAAAsAAAAAAAAACwAAAAwAAAAAAAAADAAAAA0AAAAAAAAADQAAAA4AAAAAAAAADgAAAA8AAAAAAAAADwAAABAAAAAAAAAAEAAAABEAAAAAAAAAEQAAABIAAAAAAAAAEgAAABMAAAAAAAAAEwAAABQAAAAAAAAAFAAAABUAAAAAAAAAFQAAABYAAAAAAAAAFgAAABcAAAAAAAAAFwAAABgAAAAAAAAAGAAAABkAAAAAAAAAGQAAABoAAAAAAAAAGgAAABsAAAAAAAAAGwAAABwAAAAAAAAAHAAAAB0AAAAAAAAAHQAAAAEAAAAAAAAA"
+            "uri": "data:application/octet-stream;base64,+jWEvAAAAACI3lI8fVh+vHn44DgUgV888IV+vN2mXzkVSF88GdF+vB0ZpjnV6V48Fzl/vEds2jlvZ148r7x/vO8XBjprwl08LS2AvEVnHTq3/Fw8HYiAvC3eMjqlGFw8Ge6AvD08RjrhGFs87V2BvFJHVzprAFo8S9aBvEbMZTqO0lg8yFWCvIWfcTrSklc859qCvJGdejr3RFY8F2SDvLZVgDro7FQ8ve+DvHbbgTqtjlM8NnyEvHbbgTpiLlI83QeFvLZVgDon0FA8DZGFvJGdejoYeE88LBaGvIWfcTo+Kk48qZWGvEbMZTqC6kw8Bg6HvFJHVzqkvEs8232HvD08RjoupEo81uOHvC3eMjprpEk8xz6IvEVnHTpZwEg8nI2IvO8XBjqk+kc8aM+IvEds2jmgVUc8ZwOJvB0Zpjk600Y8+yiJvN2mXzn6dEY8tT+JvHn44Dj8O0Y8UEeJvIRzDyDpKEY8tT+JvHn44Lj8O0Y8+yiJvN2mX7n6dEY8ZwOJvB0Zprk600Y8aM+IvEds2rmgVUc8nI2IvO8XBrqk+kc8xz6IvEVnHbpZwEg81uOHvC3eMrprpEk8232HvD08RroupEo8Bg6HvFJHV7qkvEs8qZWGvEbMZbqC6kw8LBaGvIWfcbo+Kk48DZGFvJGderoYeE883QeFvLZVgLon0FA8NnyEvHbbgbpiLlI8ve+DvHbbgbqtjlM8F2SDvLZVgLro7FQ859qCvJGderr3RFY8yFWCvIWfcbrSklc8S9aBvEbMZbqO0lg87V2BvFJHV7prAFo8Ge6AvD08RrrhGFs8HYiAvC3eMrqlGFw8LS2AvEVnHbq3/Fw8r7x/vO8XBrprwl08Fzl/vEds2rlvZ148GdF+vB0ZprnV6V488IV+vN2mX7kVSF88fVh+vHn44LgUgV88R0l+vAAAAAAmlF88HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/HCZIvwAAAIAHnR8/AAAAAAEAAAACAAAAAgAAAAMAAAAAAAAAAwAAAAQAAAAAAAAABAAAAAUAAAAAAAAABQAAAAYAAAAAAAAABgAAAAcAAAAAAAAABwAAAAgAAAAAAAAACAAAAAkAAAAAAAAACQAAAAoAAAAAAAAACgAAAAsAAAAAAAAACwAAAAwAAAAAAAAADAAAAA0AAAAAAAAADQAAAA4AAAAAAAAADgAAAA8AAAAAAAAADwAAABAAAAAAAAAAEAAAABEAAAAAAAAAEQAAABIAAAAAAAAAEgAAABMAAAAAAAAAEwAAABQAAAAAAAAAFAAAABUAAAAAAAAAFQAAABYAAAAAAAAAFgAAABcAAAAAAAAAFwAAABgAAAAAAAAAGAAAABkAAAAAAAAAGQAAABoAAAAAAAAAGgAAABsAAAAAAAAAGwAAABwAAAAAAAAAHAAAAB0AAAAAAAAAHQAAAB4AAAAAAAAAHgAAAB8AAAAAAAAAHwAAACAAAAAAAAAAIAAAACEAAAAAAAAA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HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/HCZIPwAAAIAHnR+/AAAAAAEAAAACAAAAAgAAAAMAAAAAAAAAAwAAAAQAAAAAAAAABAAAAAUAAAAAAAAABQAAAAYAAAAAAAAABgAAAAcAAAAAAAAABwAAAAgAAAAAAAAACAAAAAkAAAAAAAAACQAAAAoAAAAAAAAACgAAAAsAAAAAAAAACwAAAAwAAAAAAAAADAAAAA0AAAAAAAAADQAAAA4AAAAAAAAADgAAAA8AAAAAAAAADwAAABAAAAAAAAAAEAAAABEAAAAAAAAAEQAAABIAAAAAAAAAEgAAABMAAAAAAAAAEwAAABQAAAAAAAAAFAAAABUAAAAAAAAAFQAAABYAAAAAAAAAFgAAABcAAAAAAAAAFwAAABgAAAAAAAAAGAAAABkAAAAAAAAAGQAAABoAAAAAAAAAGgAAABsAAAAAAAAAGwAAABwAAAAAAAAAHAAAAB0AAAAAAAAAHQAAAB4AAAAAAAAAHgAAAB8AAAAAAAAAHwAAACAAAAAAAAAAIAAAACEAAAAAAAAAIQAAACIAAAAAAAAAIgAAACMAAAAAAAAAIwAAACQAAAAAAAAAJAAAACUAAAAAAAAAJQAAACYAAAAAAAAAJgAAACcAAAAAAAAAJwAAACgAAAAAAAAAKAAAACkAAAAAAAAAKQAAACoAAAAAAAAAKgAAACsAAAAAAAAAKwAAACwAAAAAAAAALAAAAC0AAAAAAAAALQAAAC4AAAAAAAAALgAAAC8AAAAAAAAALwAAADAAAAAAAAAAMAAAADEAAAAAAAAAMQAAADIAAAAAAAAAMgAAADMAAAAAAAAAMwAAADQAAAAAAAAANAAAADUAAAAAAAAANQAAADYAAAAAAAAANgAAADcAAAAAAAAANwAAADgAAAAAAAAAOAAAADkAAAAAAAAAOQAAADoAAAAAAAAAOgAAAAEAAAAAAAAA"
         }
     ],
     "extensionsUsed": [
         "PTC_onshape_metadata"
     ],
     "materials": [
-        {
-            "doubleSided": true,
-            "name": "0.603922_0.647059_0.686275_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.6039215922355652,
-                    0.6470588445663452,
-                    0.686274528503418,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.301961_0.290196_0.262745_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.3019607961177826,
-                    0.29019609093666077,
-                    0.26274511218070984,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.647059_0.647059_0.647059_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.6470588445663452,
-                    0.6470588445663452,
-                    0.6470588445663452,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
         {
             "doubleSided": true,
             "name": "0.980392_0.713725_0.003922_0.000000_0.000000",
@@ -275,292 +236,12 @@
         },
         {
             "doubleSided": true,
-            "name": "0.262745_0.282353_0.301961_0.000000_0.000000",
+            "name": "0.603922_0.647059_0.686275_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.26274511218070984,
-                    0.2823529541492462,
-                    0.3019607961177826,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.910000_0.910000_0.910000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.9100000262260437,
-                    0.9100000262260437,
-                    0.9100000262260437,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "1.000000_0.000000_0.000000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.717647_1.000000_0.988235_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.7176470756530762,
-                    1.0,
-                    0.9882352948188782,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "1.000000_1.000000_1.000000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.643137_0.615686_0.600000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.6431372761726379,
-                    0.615686297416687,
-                    0.6000000238418579,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.000000_0.000000_0.000000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.250980_0.250980_0.250980_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.250980406999588,
-                    0.250980406999588,
-                    0.250980406999588,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.968627_0.874510_0.600000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.9686274528503418,
-                    0.8745098114013672,
-                    0.6000000238418579,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "1.000000_0.505882_0.215686_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    1.0,
-                    0.5058823823928833,
-                    0.21568627655506134,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.968627_0.749020_1.000000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.9686274528503418,
-                    0.7490196228027344,
-                    1.0,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.682353_0.427451_0.007843_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.6823529601097107,
-                    0.4274509847164154,
-                    0.007843137718737125,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.498039_0.498039_0.498039_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.49803921580314636,
-                    0.49803921580314636,
-                    0.49803921580314636,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.800000_0.800000_0.800000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.400000_0.400000_0.400000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    0.4000000059604645,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.301961_0.301961_0.301961_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.3019607961177826,
-                    0.3019607961177826,
-                    0.3019607961177826,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.701961_0.701961_0.701961_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.7019608020782471,
-                    0.7019608020782471,
-                    0.7019608020782471,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.600000_0.600000_0.600000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.6000000238418579,
-                    0.6000000238418579,
-                    0.6000000238418579,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.823529_0.623529_0.035294_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.8235294222831726,
-                    0.6235294342041016,
-                    0.03529411926865578,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.941176_0.874510_0.678431_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.9411764740943909,
-                    0.8745098114013672,
-                    0.6784313917160034,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.917647_0.917647_0.917647_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.9176470637321472,
-                    0.9176470637321472,
-                    0.9176470637321472,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.901961_0.901961_0.901961_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.9019607901573181,
-                    0.9019607901573181,
-                    0.9019607901573181,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "1.000000_0.949020_0.909804_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    1.0,
-                    0.9490196108818054,
-                    0.9098039269447327,
+                    0.6039215922355652,
+                    0.6470588445663452,
+                    0.686274528503418,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -581,12 +262,90 @@
         },
         {
             "doubleSided": true,
+            "name": "0.301961_0.301961_0.301961_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.3019607961177826,
+                    0.3019607961177826,
+                    0.3019607961177826,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.650980_0.486275_0.019608_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.6509804129600525,
+                    0.48627451062202454,
+                    0.019607843831181526,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "1.000000_0.949020_0.909804_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    1.0,
+                    0.9490196108818054,
+                    0.9098039269447327,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
             "name": "0.615686_0.811765_0.929412_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
                     0.615686297416687,
                     0.8117647171020508,
                     0.929411768913269,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.498039_0.498039_0.498039_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.49803921580314636,
+                    0.49803921580314636,
+                    0.49803921580314636,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.501961_0.501961_0.501961_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.501960813999176,
+                    0.501960813999176,
+                    0.501960813999176,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.647059_0.647059_0.647059_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.6470588445663452,
+                    0.6470588445663452,
+                    0.6470588445663452,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -607,12 +366,32 @@
         },
         {
             "doubleSided": true,
-            "name": "0.501961_0.501961_0.501961_0.000000_0.000000",
+            "name": "1.000000_1.000000_1.000000_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.910000_0.910000_0.910000_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
+                    0.9100000262260437,
+                    0.9100000262260437,
+                    0.9100000262260437,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.917647_0.917647_0.917647_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.9176470637321472,
+                    0.9176470637321472,
+                    0.9176470637321472,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -646,12 +425,12 @@
         },
         {
             "doubleSided": true,
-            "name": "0.223529_0.223529_0.223529_0.000000_0.000000",
+            "name": "0.627451_0.627451_0.627451_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.2235294133424759,
-                    0.2235294133424759,
-                    0.2235294133424759,
+                    0.6274510025978088,
+                    0.6274510025978088,
+                    0.6274510025978088,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -672,25 +451,12 @@
         },
         {
             "doubleSided": true,
-            "name": "0.627451_0.627451_0.627451_0.000000_0.000000",
+            "name": "0.223529_0.223529_0.223529_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.6274510025978088,
-                    0.6274510025978088,
-                    0.6274510025978088,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "1.000000_0.266667_0.101961_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    1.0,
-                    0.2666666805744171,
-                    0.10196078568696976,
+                    0.2235294133424759,
+                    0.2235294133424759,
+                    0.2235294133424759,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -711,103 +477,155 @@
         },
         {
             "doubleSided": true,
-            "name": "0.768627_0.768627_0.768627_0.000000_0.000000",
+            "name": "1.000000_0.266667_0.101961_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.7686274647712708,
-                    0.7686274647712708,
-                    0.7686274647712708,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.000000_0.501961_0.000000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.0,
-                    0.501960813999176,
-                    0.0,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.050980_0.050980_0.050980_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.05098039284348488,
-                    0.05098039284348488,
-                    0.05098039284348488,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.843137_0.815686_0.752941_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.843137264251709,
-                    0.8156862854957581,
-                    0.7529411911964417,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.752941_0.000000_0.000000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.7529411911964417,
-                    0.0,
-                    0.0,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.000000_0.000000_0.752941_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.0,
-                    0.0,
-                    0.7529411911964417,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.188235_0.188235_0.188235_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.1882352977991104,
-                    0.1882352977991104,
-                    0.1882352977991104,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.866667_0.909804_1.000000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.8666666746139526,
-                    0.9098039269447327,
                     1.0,
+                    0.2666666805744171,
+                    0.10196078568696976,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.000000_0.000000_0.000000_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.823529_0.623529_0.035294_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.8235294222831726,
+                    0.6235294342041016,
+                    0.03529411926865578,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.262745_0.282353_0.301961_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.26274511218070984,
+                    0.2823529541492462,
+                    0.3019607961177826,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.941176_0.874510_0.678431_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.9411764740943909,
+                    0.8745098114013672,
+                    0.6784313917160034,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.400000_0.400000_0.400000_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.250980_0.250980_0.250980_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.250980406999588,
+                    0.250980406999588,
+                    0.250980406999588,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.800000_0.800000_0.800000_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.701961_0.701961_0.701961_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.7019608020782471,
+                    0.7019608020782471,
+                    0.7019608020782471,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "1.000000_0.000000_0.000000_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.901961_0.901961_0.901961_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.9019607901573181,
+                    0.9019607901573181,
+                    0.9019607901573181,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.600000_0.600000_0.600000_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -821,6 +639,19 @@
                     0.37254902720451355,
                     0.37254902720451355,
                     0.37254902720451355,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.000000_0.501961_0.000000_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.0,
+                    0.501960813999176,
+                    0.0,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -854,12 +685,12 @@
         },
         {
             "doubleSided": true,
-            "name": "0.650980_0.486275_0.019608_0.000000_0.000000",
+            "name": "0.839216_0.470588_0.368627_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.6509804129600525,
-                    0.48627451062202454,
-                    0.019607843831181526,
+                    0.8392156958580017,
+                    0.47058823704719543,
+                    0.3686274588108063,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -867,12 +698,51 @@
         },
         {
             "doubleSided": true,
-            "name": "0.749020_0.749020_0.749020_0.000000_0.000000",
+            "name": "1.000000_0.505882_0.215686_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
+                    1.0,
+                    0.5058823823928833,
+                    0.21568627655506134,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.968627_0.874510_0.600000_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.9686274528503418,
+                    0.8745098114013672,
+                    0.6000000238418579,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.968627_0.749020_1.000000_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.9686274528503418,
                     0.7490196228027344,
-                    0.7490196228027344,
-                    0.7490196228027344,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.301961_0.290196_0.262745_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.3019607961177826,
+                    0.29019609093666077,
+                    0.26274511218070984,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -886,6 +756,19 @@
                     0.23137255012989044,
                     0.3803921639919281,
                     0.7058823704719543,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.749020_0.749020_0.749020_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.7490196228027344,
+                    0.7490196228027344,
+                    0.7490196228027344,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -912,19 +795,6 @@
                     0.9725490212440491,
                     0.529411792755127,
                     0.003921568859368563,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.207843_0.207843_0.207843_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.2078431397676468,
-                    0.2078431397676468,
-                    0.2078431397676468,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -971,6 +841,45 @@
         },
         {
             "doubleSided": true,
+            "name": "0.815686_0.815686_0.815686_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.8156862854957581,
+                    0.8156862854957581,
+                    0.8156862854957581,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.207843_0.207843_0.207843_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.2078431397676468,
+                    0.2078431397676468,
+                    0.2078431397676468,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.188235_0.188235_0.188235_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.1882352977991104,
+                    0.1882352977991104,
+                    0.1882352977991104,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
             "name": "1.000000_0.756863_0.054902_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
@@ -1010,6 +919,45 @@
         },
         {
             "doubleSided": true,
+            "name": "0.196078_0.196078_0.196078_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.19607843458652496,
+                    0.19607843458652496,
+                    0.19607843458652496,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.980392_0.705882_0.176471_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.9803921580314636,
+                    0.7058823704719543,
+                    0.1764705926179886,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.458824_0.345098_0.176471_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4588235318660736,
+                    0.3450980484485626,
+                    0.1764705926179886,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
             "name": "0.596078_0.666667_0.686275_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
@@ -1023,77 +971,12 @@
         },
         {
             "doubleSided": true,
-            "name": "0.650980_0.588235_0.552941_0.000000_0.000000",
+            "name": "0.725490_0.725490_0.725490_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.6509804129600525,
-                    0.5882353186607361,
-                    0.5529412031173706,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.960784_0.960784_0.960784_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.9607843160629272,
-                    0.9607843160629272,
-                    0.9607843160629272,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.831373_0.831373_0.831373_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.8313725590705872,
-                    0.8313725590705872,
-                    0.8313725590705872,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "1.000000_1.000000_0.000000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.627451_0.313725_0.000000_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.6274510025978088,
-                    0.3137255012989044,
-                    0.0,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.141176_0.470588_0.196078_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.1411764770746231,
-                    0.47058823704719543,
-                    0.19607843458652496,
+                    0.7254902124404907,
+                    0.7254902124404907,
+                    0.7254902124404907,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -1140,12 +1023,12 @@
         },
         {
             "doubleSided": true,
-            "name": "0.431373_0.431373_0.431373_0.000000_0.000000",
+            "name": "0.870588_0.701961_0.349020_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.4313725531101227,
-                    0.4313725531101227,
-                    0.4313725531101227,
+                    0.8705882430076599,
+                    0.7019608020782471,
+                    0.3490196168422699,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -1153,12 +1036,12 @@
         },
         {
             "doubleSided": true,
-            "name": "0.725490_0.725490_0.725490_0.000000_0.000000",
+            "name": "0.141176_0.470588_0.196078_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.7254902124404907,
-                    0.7254902124404907,
-                    0.7254902124404907,
+                    0.1411764770746231,
+                    0.47058823704719543,
+                    0.19607843458652496,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -1179,12 +1062,12 @@
         },
         {
             "doubleSided": true,
-            "name": "0.749020_0.568627_0.411765_0.000000_0.000000",
+            "name": "0.650980_0.588235_0.552941_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.7490196228027344,
-                    0.5686274766921997,
-                    0.4117647111415863,
+                    0.6509804129600525,
+                    0.5882353186607361,
+                    0.5529412031173706,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -1192,12 +1075,12 @@
         },
         {
             "doubleSided": true,
-            "name": "0.121569_0.749020_0.121569_0.000000_0.000000",
+            "name": "1.000000_1.000000_0.000000_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.12156862765550613,
-                    0.7490196228027344,
-                    0.12156862765550613,
+                    1.0,
+                    1.0,
+                    0.0,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -1205,12 +1088,25 @@
         },
         {
             "doubleSided": true,
-            "name": "0.870588_0.701961_0.349020_0.000000_0.000000",
+            "name": "0.431373_0.431373_0.431373_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.8705882430076599,
-                    0.7019608020782471,
-                    0.3490196168422699,
+                    0.4313725531101227,
+                    0.4313725531101227,
+                    0.4313725531101227,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.960784_0.960784_0.960784_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.9607843160629272,
+                    0.9607843160629272,
+                    0.9607843160629272,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -1244,12 +1140,51 @@
         },
         {
             "doubleSided": true,
+            "name": "0.121569_0.749020_0.121569_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.12156862765550613,
+                    0.7490196228027344,
+                    0.12156862765550613,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
             "name": "0.101961_0.898039_0.101961_0.000000_0.000000",
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
                     0.10196078568696976,
                     0.8980392217636108,
                     0.10196078568696976,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.749020_0.568627_0.411765_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.7490196228027344,
+                    0.5686274766921997,
+                    0.4117647111415863,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            }
+        },
+        {
+            "doubleSided": true,
+            "name": "0.831373_0.831373_0.831373_0.000000_0.000000",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.8313725590705872,
+                    0.8313725590705872,
+                    0.8313725590705872,
                     1.0
                 ],
                 "metallicFactor": 0.0
@@ -1267,24 +1202,11 @@
                 ],
                 "metallicFactor": 0.0
             }
-        },
-        {
-            "doubleSided": true,
-            "name": "0.196078_0.196078_0.196078_0.000000_0.000000",
-            "pbrMetallicRoughness": {
-                "baseColorFactor": [
-                    0.19607843458652496,
-                    0.19607843458652496,
-                    0.19607843458652496,
-                    1.0
-                ],
-                "metallicFactor": 0.0
-            }
         }
     ],
     "meshes": [
         {
-            "name": "mesh2288_mesh",
+            "name": "mesh39717_mesh",
             "primitives": [
                 {
                     "attributes": {
@@ -1292,12 +1214,12 @@
                         "POSITION": 0
                     },
                     "indices": 2,
-                    "material": 16
+                    "material": 7
                 }
             ]
         },
         {
-            "name": "mesh2289_mesh",
+            "name": "mesh39718_mesh",
             "primitives": [
                 {
                     "attributes": {
@@ -1305,12 +1227,12 @@
                         "POSITION": 3
                     },
                     "indices": 5,
-                    "material": 16
+                    "material": 7
                 }
             ]
         },
         {
-            "name": "mesh2290_mesh",
+            "name": "mesh39719_mesh",
             "primitives": [
                 {
                     "attributes": {
@@ -1318,7 +1240,7 @@
                         "POSITION": 6
                     },
                     "indices": 8,
-                    "material": 16
+                    "material": 7
                 }
             ]
         }
@@ -1326,15 +1248,15 @@
     "nodes": [
         {
             "mesh": 0,
-            "name": "mesh2288"
+            "name": "mesh39717"
         },
         {
             "mesh": 1,
-            "name": "mesh2289"
+            "name": "mesh39718"
         },
         {
             "mesh": 2,
-            "name": "mesh2290"
+            "name": "mesh39719"
         }
     ],
     "scene": 0,
