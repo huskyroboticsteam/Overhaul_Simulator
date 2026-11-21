@@ -1,0 +1,28 @@
+{
+    "name": "Overhaul Simulator",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".."
+    },
+    "forwardPorts": [5901, 6080],
+    "runArgs": ["--shm-size=1g"],
+    "remoteUser": "ros",
+    "workspaceFolder": "/ros2_ws",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/ros2_ws,type=bind",
+    "containerEnv": {
+        "ROS_DOMAIN_ID": "42"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-themes",
+                "twxs.cmake"
+            ]
+        }
+    },
+    // The repo is bind-mounted over /ros2_ws, so build it in place once the container exists
+    "postCreateCommand": "sudo apt-get update && rosdep install --from-paths src --ignore-src -y && bash -c 'source /opt/ros/humble/setup.bash && colcon build'",
+    // Desktop for Gazebo/RViz: http://localhost:6080/vnc.html (password: dockervnc)
+    "postStartCommand": "start-desktop"
+}
