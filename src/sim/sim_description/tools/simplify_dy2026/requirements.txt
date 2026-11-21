@@ -1,0 +1,9 @@
+# Pinned: the generated files are checked in, and the fitted shapes / decimated meshes
+# depend on these libraries' internals (trimesh's sampling and oriented bounds).
+numpy==2.5.5
+trimesh==5.2.1
+# trimesh's oriented bounding boxes and convex hulls need these
+scipy==1.18.1
+networkx==3.7
+# quadric mesh decimation for simplify_dy2026_meshes.py
+fast-simplification==0.2.0
